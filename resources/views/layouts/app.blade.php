@@ -35,11 +35,11 @@
         </main>
         <style>
             .container-main {
-                background-color: #F19143;
+                background-color: #F5F5DC;
             }
 
             .header-page {
-                background-color: #F19143;
+                background-color: #F5F5DC;
             }
         </style>
     </div>
