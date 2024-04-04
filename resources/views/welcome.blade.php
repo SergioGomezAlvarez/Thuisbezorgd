@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thuisbezorgd</title>
+    <title>SGA Café</title>
     <link rel="stylesheet" type="text/css"
         href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.0-alpha1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -25,13 +25,18 @@
             </h2>
         </x-slot>
 
-        <div class="py-12">
-
+        <div class="main-welcome-container">
+            <h1 class="welcome-text-main fade-in-text-main">A Taste of Perfection</h1>
+            <h1 class="welcome-text-secondary fade-in-text-secondary">Crafted with Love, Served with joy</h1>
+            <h1 class="welcome-text-bla fade-in-text-secondary">Have a glimpse inside and uncover more with just one
+                click</h1>
+            <div class="dashboard-button-placement">
+                <a href="{{ route('dashboard') }}" class="custom-button">Have a Look Around</a>
+            </div>
         </div>
     </x-app-layout>
     <style>
-
-        .sign-in-container{
+        .sign-in-container {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -40,8 +45,88 @@
             background-color: #F5F5DC;
         }
 
-        .page-header-text{
+        .page-header-text {
             color: black;
+        }
+
+        .main-welcome-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: auto;
+            width: 100%;
+        }
+
+        .welcome-text-main {
+            padding-top: 50px;
+            font-size: 4.5rem;
+            font-weight: 300;
+        }
+
+        .welcome-text-secondary {
+            padding-top: 20px;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        .welcome-text-bla {
+            padding-top: 80px;
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        .fade-in-text-main {
+            animation: fadeIn 2s ease-in forwards;
+            /* Apply the fadeIn animation */
+            opacity: 0;
+            /* Start with 0 opacity */
+        }
+
+        .fade-in-text-secondary {
+            animation: fadeIn 2.5s ease-in forwards;
+            /* Apply the fadeIn animation */
+            opacity: 0;
+            /* Start with 0 opacity */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                /* Start with 0 opacity */
+            }
+
+            to {
+                opacity: 1;
+                /* End with 1 opacity */
+            }
+        }
+
+        .custom-button {
+            display: inline-block;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+
+            padding: 15px 32px;
+            border-radius: 10px;
+            transition-duration: 0.4s;
+            font-size: 16px;
+
+            background-color: rgb(36, 36, 36);
+            color: white;
+
+        }
+
+        .custom-button:hover {
+            background-color: rgb(100, 100, 100);
+            color: white;
+            /* Donkerder groene achtergrondkleur bij hover */
+        }
+
+        .dashboard-button-placement{
+            padding-top: 60px;
         }
     </style>
 
