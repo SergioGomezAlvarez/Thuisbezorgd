@@ -39,10 +39,15 @@
                     .dropdown-buttons:hover {
                         color: black;
                     }
+
+                    .text-black{
+                        color: black;
+                    }
                 </style>
                 <!-- Navigation Links -->
                 <div class="dashboard-button">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
+                                class="text-black">
                         {{ __('Menu') }}
                     </x-nav-link>
                 </div>

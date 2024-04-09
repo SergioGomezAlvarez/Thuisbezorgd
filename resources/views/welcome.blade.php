@@ -30,7 +30,7 @@
             <h1 class="welcome-text-secondary fade-in-text-secondary">Crafted with Love, Served with joy</h1>
             <h1 class="welcome-text-bla fade-in-text-secondary">Have a glimpse inside and uncover more with just one
                 click</h1>
-            <div class="dashboard-button-placement">
+            <div class="dashboard-button-placement fade-in-text-tertiary">
                 <a href="{{ route('dashboard') }}" class="custom-button">Have a Look Around</a>
             </div>
         </div>
@@ -85,6 +85,13 @@
 
         .fade-in-text-secondary {
             animation: fadeIn 2.5s ease-in forwards;
+            /* Apply the fadeIn animation */
+            opacity: 0;
+            /* Start with 0 opacity */
+        }
+
+        .fade-in-text-tertiary {
+            animation: fadeIn 6s ease-in forwards;
             /* Apply the fadeIn animation */
             opacity: 0;
             /* Start with 0 opacity */
