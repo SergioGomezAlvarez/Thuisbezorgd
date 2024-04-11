@@ -78,34 +78,26 @@
 
         .fade-in-text-main {
             animation: fadeIn 2s ease-in forwards;
-            /* Apply the fadeIn animation */
             opacity: 0;
-            /* Start with 0 opacity */
         }
 
         .fade-in-text-secondary {
             animation: fadeIn 2.5s ease-in forwards;
-            /* Apply the fadeIn animation */
             opacity: 0;
-            /* Start with 0 opacity */
         }
 
         .fade-in-text-tertiary {
             animation: fadeIn 6s ease-in forwards;
-            /* Apply the fadeIn animation */
             opacity: 0;
-            /* Start with 0 opacity */
         }
 
         @keyframes fadeIn {
             from {
                 opacity: 0;
-                /* Start with 0 opacity */
             }
 
             to {
                 opacity: 1;
-                /* End with 1 opacity */
             }
         }
 
@@ -129,7 +121,6 @@
         .custom-button:hover {
             background-color: rgb(100, 100, 100);
             color: white;
-            /* Donkerder groene achtergrondkleur bij hover */
         }
 
         .dashboard-button-placement{
