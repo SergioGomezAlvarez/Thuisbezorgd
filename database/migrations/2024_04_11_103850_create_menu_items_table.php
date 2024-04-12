@@ -12,6 +12,7 @@ class CreateMenuItemsTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->decimal('price', 8, 2); // Voor prijs met decimalen
+            $table->string('image')->nullable();
             $table->timestamps();
         });
     }
