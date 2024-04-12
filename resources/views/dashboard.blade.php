@@ -6,10 +6,13 @@
     </x-slot>
 
     <div class="menu-container-main">
+        <div class="menu-section-container">
+            <h1 class="menu-section-text">Luxury Meals</h1>
+        </div>
         <div class="menu-item-containers-row">
             <div class="menu-item-container">
                 <div class="image-container">
-                    <!-- Voeg hier de afbeelding toe voor het eerste gerecht -->
+                    <img class="filet-mignon" src="images/filet-mignon.png">
                 </div>
                 <div class="name-item-container">
                     <h1 class="name-text">{{ $menuItems->find(1)->title }}</h1>
@@ -18,12 +21,12 @@
                     <h1 class="name-text">{{ $menuItems->find(1)->description }}</h1>
                 </div>
                 <div class="price-item-container">
-                    <h1 class="name-text">{{ $menuItems->find(1)->price }}</h1>
+                    <h1 class="name-text">${{ $menuItems->find(1)->price }}</h1>
                 </div>
             </div>
             <div class="menu-item-container">
                 <div class="image-container">
-                    <!-- Voeg hier de afbeelding toe voor het tweede gerecht -->
+                    <img class="filet-mignon" src="images/truffle-pasta.png">
                 </div>
                 <div class="name-item-container">
                     <h1 class="name-text">{{ $menuItems->find(2)->title }}</h1>
@@ -32,14 +35,36 @@
                     <h1 class="name-text">{{ $menuItems->find(2)->description }}</h1>
                 </div>
                 <div class="price-item-container">
-                    <h1 class="name-text">{{ $menuItems->find(2)->price }}</h1>
+                    <h1 class="name-text">${{ $menuItems->find(2)->price }}</h1>
                 </div>
             </div>
             <div class="menu-item-container">
-
+                <div class="image-container">
+                    <img class="filet-mignon" src="images/oysters.png">
+                </div>
+                <div class="name-item-container">
+                    <h1 class="name-text">{{ $menuItems->find(3)->title }}</h1>
+                </div>
+                <div class="description-item-container">
+                    <h1 class="name-text">{{ $menuItems->find(3)->description }}</h1>
+                </div>
+                <div class="price-item-container">
+                    <h1 class="name-text">${{ $menuItems->find(3)->price }}</h1>
+                </div>
             </div>
             <div class="menu-item-container">
-
+                <div class="image-container">
+                    <img class="filet-mignon" src="images/wagyu.png">
+                </div>
+                <div class="name-item-container">
+                    <h1 class="name-text">{{ $menuItems->find(4)->title }}</h1>
+                </div>
+                <div class="description-item-container">
+                    <h1 class="name-text">{{ $menuItems->find(4)->description }}</h1>
+                </div>
+                <div class="price-item-container">
+                    <h1 class="name-text">${{ $menuItems->find(4)->price }}</h1>
+                </div>
             </div>
 
         </div>
@@ -54,7 +79,6 @@
         .menu-container-main {
             display: flex;
             flex-direction: column;
-            /* justify-content: center; */
             align-items: center;
 
             width: 100%;
@@ -81,7 +105,7 @@
             width: 15%;
             height: 300px;
 
-            background-color: red;
+            background-color: #dedeb4;
         }
 
         .image-container {
@@ -89,10 +113,10 @@
             justify-content: center;
             height: 50%;
             width: 100%;
-            background-color: blue;
+            background-color: #dedeb4;
         }
 
-        .name-item-container{
+        .name-item-container {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -104,7 +128,7 @@
 
         }
 
-        .description-item-container{
+        .description-item-container {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -116,7 +140,7 @@
 
         }
 
-        .price-item-container{
+        .price-item-container {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -126,6 +150,24 @@
             height: 12.5%;
 
 
+        }
+
+        .menu-section-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
+            height: 50px;
+
+        }
+
+        .menu-section-text{
+            font-size: 2.4rem;
+        }
+
+        .filet-mignon{
+            width: 70%;
         }
     </style>
 </x-app-layout>
