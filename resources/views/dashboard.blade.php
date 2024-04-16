@@ -9,6 +9,9 @@
         <div class="menu-section-container">
             <h1 class="menu-section-text">Luxury Meals</h1>
         </div>
+        @role('admin')
+            <button>Show voor admin</button>
+        @endrole
         <div class="menu-item-containers-row">
             <div class="menu-item-container">
                 <div class="image-container">
@@ -23,6 +26,7 @@
                 <div class="price-item-container">
                     <h1 class="name-text">${{ $menuItems->find(1)->price }}</h1>
                 </div>
+                <a href="#" class="custom-button">Order</a>
             </div>
             <div class="menu-item-container">
                 <div class="image-container">
@@ -37,6 +41,8 @@
                 <div class="price-item-container">
                     <h1 class="name-text">${{ $menuItems->find(2)->price }}</h1>
                 </div>
+                <a href="#" class="custom-button">Order</a>
+
             </div>
             <div class="menu-item-container">
                 <div class="image-container">
@@ -51,6 +57,8 @@
                 <div class="price-item-container">
                     <h1 class="name-text">${{ $menuItems->find(3)->price }}</h1>
                 </div>
+                <a href="#" class="custom-button">Order</a>
+
             </div>
             <div class="menu-item-container">
                 <div class="image-container">
@@ -65,6 +73,8 @@
                 <div class="price-item-container">
                     <h1 class="name-text">${{ $menuItems->find(4)->price }}</h1>
                 </div>
+                <a href="#" class="custom-button">Order</a>
+
             </div>
 
         </div>
@@ -85,6 +95,8 @@
                 <div class="price-item-container">
                     <h1 class="name-text">${{ $menuItems->find(5)->price }}</h1>
                 </div>
+                <a href="#" class="custom-button">Order</a>
+
             </div>
             <div class="menu-item-container">
                 <div class="image-container">
@@ -99,6 +111,8 @@
                 <div class="price-item-container">
                     <h1 class="name-text">${{ $menuItems->find(6)->price }}</h1>
                 </div>
+                <a href="#" class="custom-button">Order</a>
+
             </div>
             <div class="menu-item-container">
                 <div class="image-container">
@@ -113,6 +127,8 @@
                 <div class="price-item-container">
                     <h1 class="name-text">${{ $menuItems->find(7)->price }}</h1>
                 </div>
+                <a href="#" class="custom-button">Order</a>
+
             </div>
             <div class="menu-item-container">
                 <div class="image-container">
@@ -127,6 +143,8 @@
                 <div class="price-item-container">
                     <h1 class="name-text">${{ $menuItems->find(8)->price }}</h1>
                 </div>
+                <a href="#" class="custom-button">Order</a>
+
             </div>
 
         </div>

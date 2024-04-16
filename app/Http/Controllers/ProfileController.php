@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Models\User;
 
 class ProfileController extends Controller
 {
@@ -57,4 +58,19 @@ class ProfileController extends Controller
 
         return Redirect::to('/');
     }
+
+    public function assignAdminToUserOne()     {
+        // Fetch the user with ID 1
+        $user = User::find(1);
+        // Check if the user exists and doesn't already have the 'admin' role
+        if ($user && !$user->hasRole('admin')) {
+            $user->assignRole('admin');
+            return redirect()->back()->with('success', 'Admin role assigned to user with ID 1 successfully.');
+        }
+        // Handling errors or case where user already has the role
+        $error = $user ? 'User already has the admin role.' : 'User not found.';
+        dd($error);
+        //return redirect()->back()->with('error', $error);
+    }
+
 }

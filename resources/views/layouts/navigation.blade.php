@@ -24,6 +24,8 @@
                         flex-direction: row;
                         justify-content: center;
                         align-items: center;
+
+                        padding: 30px;
                         color: black;
                     }
 
@@ -40,17 +42,26 @@
                         color: black;
                     }
 
-                    .text-black{
+                    .text-black {
                         color: black;
                     }
                 </style>
                 <!-- Navigation Links -->
                 <div class="dashboard-button">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')"
-                                class="text-black">
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="text-black">
                         {{ __('Menu') }}
                     </x-nav-link>
                 </div>
+                @role('admin')
+                    <div class="dashboard-button">
+                        <a href="{{ route('admin.panel') }}" class="text-black">
+                            {{ __('Admin Panel') }}
+                        </a>
+                    </div>
+                @endrole
+
+
+
             </div>
 
             <!-- Settings Dropdown -->
