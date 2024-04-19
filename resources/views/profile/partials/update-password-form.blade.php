@@ -1,6 +1,6 @@
 <section>
     <header>
-        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100 profile-container-header-text">
             {{ __('Update Password') }}
         </h2>
 
@@ -46,3 +46,12 @@
         </div>
     </form>
 </section>
+<style>
+    .profile-container {
+        background-color: white;
+    }
+
+    .profile-container-header-text {
+        color: black;
+    }
+</style>

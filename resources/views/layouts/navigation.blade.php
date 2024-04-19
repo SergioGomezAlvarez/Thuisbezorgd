@@ -52,11 +52,16 @@
                         {{ __('Menu') }}
                     </x-nav-link>
                 </div>
+                <div class="dashboard-button">
+                    <x-nav-link :href="route('contact')" :active="request()->routeIs('contact')" class="text-black">
+                        {{ __('Contact') }}
+                    </x-nav-link>
+                </div>
                 @role('admin')
                     <div class="dashboard-button">
-                        <a href="{{ route('admin.panel') }}" class="text-black">
+                        <x-nav-link href="{{ route('admin.panel') }}" class="text-black">
                             {{ __('Admin Panel') }}
-                        </a>
+                        </x-nav-link>
                     </div>
                 @endrole
 
